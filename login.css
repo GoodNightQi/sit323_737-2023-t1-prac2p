@@ -1,0 +1,90 @@
+body{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    /*前三项的设置可以通过星号整体设置，不会有太大影响*/
+    /* justify-content属性定义了项目在主轴上的对齐方式
+    display的flex弹性布局，自定义一个容器，横向主轴，垂直的交叉轴
+    对于justify-content，定义了主轴上的布局方式，布局设置参数:
+    flex-start（默认值）：左对齐
+    flex-end：右对齐
+    center： 居中
+    space-between：两端对齐，项目之间的间隔都相等。
+    space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
+    对于align-items
+    align-items属性定义项目在交叉轴上如何对齐。
+    flex-start：交叉轴的起点对齐。
+    flex-end：交叉轴的终点对齐。
+    center：交叉轴的中点对齐。
+    baseline: 项目的第一行文字的基线对齐。
+    stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
+    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(./images/cloud.png);
+    /*解决分辨率不匹配多次平铺的问题*/
+    background-size: cover;
+}
+
+.hpj{
+    /*设置盒子几个必备属性，width，height，display*/
+    width: 500px;
+    height: 350px ;
+    display: flex;
+    /*设置边框圆角，一般是左上，右上，右下到左下，4个属性，只写1个值默认全部统一 */
+    border-radius: 30px;
+    /*让登录的盒子居中，相对于的是?*/
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255,255,255,.7),
+        rgba(255,255,255,.5),
+        rgba(255,255,255,.4)
+    );
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px #a29bfe;
+    
+}
+
+.zxq{
+    font: 900 30px '';
+    text-align: center;
+    letter-spacing:5px;
+    color: #3d3d3d;
+}
+.login{
+    /*当元素内的内容溢出的时候使它隐藏溢出的部分*/
+    overflow: hidden;
+}
+.login input{
+    width: 100%;
+    margin-bottom: 20px;
+    outline: none;
+    border: 0;
+    padding: 10px;
+    background-color: transparent;
+    border-bottom: 3px solid rgb(150, 150, 240);
+    font: 900 16px '';
+}
+.button{
+    display: block;
+    /*？？不论设置块级元素还是弹性布局，都无法通过设置宽度调整居中*/
+    text-align: center;
+    height: 24px;
+    padding: 14px;
+    /*设置字体, "font-style font-variant font-weight font-size/line-height font-family"
+    font-size和font-family的值是必需的。如果缺少了其他值，默认值将被插入，如果有默认值的话。
+    此处设置了font-style字体样式(斜体)，font-weight字体粗细，font-size，字体大小,font-family字体系列*/
+    font:oblique normal 20px 'arial';
+    border-radius: 10px;
+    margin-top: 20px;
+    color: #fff;
+    /* letter-spacing 属性增加或减少字符间的空白(字符间距)*/
+    letter-spacing: 3px;
+    /*类似于图片填充颜色，设置从右到左渐变*/
+    background-image: linear-gradient(to left,
+    #fd79a8,#a29bf6);
+}
